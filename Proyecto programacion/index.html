@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto programacion</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="top">
+  <strong>AstroGravity</strong>
+  <nav class="menu">
+    <span class="active">Calculadora</span>
+    <span>Planetas</span>
+    <span>Física Gravitacional</span>
+  </nav>
+  <small class="user">C</small>
+</header>
+
+<section class="sub">
+  <nav class="sub-left">
+    <small class="pill">MÓDULO DE TELEMETRÍA ORBITAL V4.5</small>
+    <small class="pill green">● Conectado a Efemérides JPL / NASA</small>
+  </nav>
+  <small class="sub-right">© Referencia Base: Tierra (1.00g = 9.81 m/s²)</small>
+</section>
+
+<main class="contenido">
+  <!-- IZQUIERDA -->
+  <section class="card">
+    <small>CALCULADORA GRAVITACIONAL</small>
+    <h2>Parámetros de Masa</h2>
+
+    <form>
+      <label>
+        Tu peso en la Tierra <span>kg</span>
+        <fieldset>
+          <input type="number" value="70">
+          <span>KG</span>
+        </fieldset>
+      </label>
+    </form>
+
+    <small class="destinog"> Destino Gravitacional </small>
+    <section class="planetas">
+      <button class="planeta activo">MARTE <b>0.38g</b></button>
+      <button class="planeta">JUPITER <b>2.53g</b></button>
+      <button class="planeta">VENUS <b>0.91g</b></button>
+      <button class="planeta">LUNA <b>0.17g</b></button>
+      <button class="planeta">MERCURIO <b>0.38 g</b></button>
+      <button class="planeta">URANO <b>0.89 g</b></button>
+    </section>
+  </section>
+<section class="card resultado">
+  <small>VISUALIZACIÓN GRAVITACIONAL</small>
+  
+  <figure class="planeta-visual">
+    <span class="planeta-grande"></span>
+    <figcaption>MARTE</figcaption>
+  </figure>
+
+  <h1>26.6 <span>kg</span></h1>
+  <small>Tu peso en Marte</small>
+<ul class="datos">
+  <li><span>Gravedad</span> <b id="g-valor">3.71 m/s²</b></li>
+  <li><span>Diferencia</span> <b id="dif-valor">-43.4 kg</b></li>
+</ul>
+ 
+</section>
+</main>
+<script src="script.js"></script>     
+</body>
