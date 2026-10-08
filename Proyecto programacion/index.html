@@ -7,41 +7,44 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<header class="top">
-  <strong>AstroGravity</strong>
-  <nav class="menu">
-    <span class="active">Calculadora</span>
-    <span>Planetas</span>
-    <span>Física Gravitacional</span>
-  </nav>
-  <small class="user">C</small>
-</header>
+    <header class="top">
+        <strong>AstroGravity</strong>
+        <nav class="menu">
+            <span class="active" data-key="menu_calc">Calculadora</span>
+            <span data-key="menu_planets">Planetas</span>
+            <span data-key="menu_physics">Física Gravitacional</span>
+        </nav>
+        
+        <!-- Aquí recuperamos los botones de idioma para que JS no dé error -->
+        <div class="lang-group">
+            <button class="btn-lang active" id="btn-es">ES</button>
+            <button class="btn-lang" id="btn-en">EN</button>
+        </div>
 
-<section class="sub">
-  <nav class="sub-left">
-    <small class="pill">MÓDULO DE TELEMETRÍA ORBITAL V4.5</small>
-    <small class="pill green">● Conectado a Efemérides JPL / NASA</small>
-  </nav>
-  <small class="sub-right">© Referencia Base: Tierra (1.00g = 9.81 m/s²)</small>
-</section>
+        <small class="user">C</small>
+    </header>
 
-<main class="contenido">
-  <!-- IZQUIERDA -->
-  <section class="card">
-    <small>CALCULADORA GRAVITACIONAL</small>
-    <h2>Parámetros de Masa</h2>
+    <section class="sub">
+        <nav class="sub-left">
+            <small class="pill">MÓDULO DE TELEMETRÍA ORBITAL V4.5</small>
+            <small class="pill green">Conectado a Efemérides JPL / NASA</small>
+        </nav>
+        <small class="sub-right">Referencia Base: Tierra (1.00g = 9.81 m/s²)</small>
+    </section>
 
-    <form>
-      <label>
-        Tu peso en la Tierra <span>kg</span>
-        <fieldset>
-          <input type="number" value="70">
-          <span>KG</span>
-        </fieldset>
-      </label>
-    </form>
-
-    <small class="destinog"> Destino Gravitacional </small>
+    <main class="contenido">
+        <!-- IZQUIERDA -->
+        <section class="card">
+            <small data-key="card_sub">CALCULADORA GRAVITACIONAL</small>
+            <h2 data-key="card_title">Parámetros de Masa</h2>
+            <label>
+                <span data-key="label_weight">Tu peso en la Tierra</span> <span>kg</span>
+                <fieldset>
+                    <input type="number" value="70">
+                    <span>KG</span>
+                </fieldset>
+            </label>
+<small class="destinog" data-key="dest_title">Destino Gravitacional</small> 
     <section class="planetas">
       <button class="planeta activo">MARTE <b>0.38g</b></button>
       <button class="planeta">JUPITER <b>2.53g</b></button>
@@ -60,13 +63,14 @@
     <span class="planeta-grande"></span>
     <figcaption>MARTE</figcaption>
   </figure>
+<h1 id="peso_resultado">26.6 <span>kg</span></h1>
 
-  <h1>26.6 <span>kg</span></h1>
-  <small>Tu peso en Marte</small>
-<ul class="datos">
-  <li><span>Gravedad</span> <b id="g-valor">3.71 m/s²</b></li>
-  <li><span>Diferencia</span> <b id="dif-valor">-43.4 kg</b></li>
-</ul>
+             <small data-key="lbl_sub_weight">Tu peso en Marte</small>
+            <ul class="datos">
+                <li><span data-key="lbl_gravity">Gravedad</span> <b id="g_valor">3.71 m/s²</b></li>
+                <li><span data-key="lbl_diff">Diferencia</span> <b id="dif_valor">-43.4 kg</b></li>
+            </ul>
+
  
 </section>
 </main>
